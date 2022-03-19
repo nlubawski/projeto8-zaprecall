@@ -1,4 +1,4 @@
-import Perguntas from "./Perguntas"
+import Pergunta from "./Pergunta"
 
 export default function Deck(){
 
@@ -25,13 +25,12 @@ export default function Deck(){
         <section className="perguntas">
             {
                 perguntas.map( (pergunta,index) => {
-                    console.log(index + 1)
-                    return <Perguntas index={index}/>} )
+                    return <Pergunta key={index} index={index} questao={pergunta.questao} resposta={pergunta.resposta} />} )
             }
         </section>
 
-        <section>
-
+        <section className="barra-inferior">
+            0/0 Concluidas
         </section>
             
         </>
