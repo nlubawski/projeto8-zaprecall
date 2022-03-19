@@ -1,9 +1,10 @@
-import BoasVindas from "./BoasVindas"
+import TelaInicial from "./TelaInicial"
 
 export default function App(){
     return (
         <>
-            <BoasVindas />
+            <TelaInicial />
+            
         </>
         
     )
