@@ -1,15 +1,20 @@
 import React from "react"
+import Resposta from "./Resposta"
 
 export default function Pergunta({questao,resposta,index}){
 
-    const [abrir, setAbrir] = React.useState(false)
+    const [abrirPergunta, setAbrirPergunta] = React.useState(false)
+    let soResposta = false
 
-    if (abrir){
-        return (<div   className="pergunta-questao"><p>{questao} </p> <img src="./assets/imagens/virar.png" alt="abrir pergunta" />
+    if (abrirPergunta){
+        if(soResposta){
+            return (<div className="pergunta-questao"><p>{questao} </p>  </div>)
+        }else{
+            return (<Resposta resposta={resposta} soResposta={soResposta} questao={questao} />)
+        }
+    } else {
+        return (<div   className="pergunta"><p>Pergunta {index + 1}</p> <img onClick={() => setAbrirPergunta(!abrirPergunta)}  src="./assets/imagens/seta.png" alt="ver resposta" />
         </div>)
-    }else{
-        return (<div  onClick={() => setAbrir(!abrir)} className="pergunta"><p>Pergunta {index + 1}</p> <img  src="./assets/imagens/seta.png" alt="ver resposta" />
-        </div>)
-        
     }
+    
 }
