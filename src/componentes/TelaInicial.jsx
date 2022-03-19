@@ -1,7 +1,8 @@
 import React from "react";
+import Deck from "./Deck";
 
 export default function TelaInicial() {
-  const [visivel, setVisivel] = React.useState(true);
+  const [visivel, setVisivel] = React.useState(false);
 
   function iniciar() {
     setVisivel(!visivel)
@@ -17,7 +18,7 @@ export default function TelaInicial() {
     );
     
   }else{
-    return (<></>);
+    return (<Deck />);
   }
 }
 
