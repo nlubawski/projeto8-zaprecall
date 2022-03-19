@@ -1,3 +1,5 @@
+import Perguntas from "./Perguntas"
+
 export default function Deck(){
 
 
@@ -19,12 +21,15 @@ export default function Deck(){
             <h1>ZapRecall</h1>
         </section >  
 
-        <section className="perguntas">
-            <div className="pergunta">
-                <p>Pergunta 1</p> <img src="./assets/imagens/seta.png" alt="abrir pergunta" />
-            </div>
         
+        <section className="perguntas">
+            {
+                perguntas.map( (pergunta,index) => {
+                    console.log(index + 1)
+                    return <Perguntas index={index}/>} )
+            }
         </section>
+
         <section>
 
         </section>
