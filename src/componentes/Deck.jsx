@@ -1,7 +1,15 @@
+import React from 'react'
 import Pergunta from "./Pergunta"
+import Concluidas from './Concluidas'
+import Topo from './Topo'
 
 export default function Deck(){
 
+    const [contagem, setContagem] = React.useState(0)
+
+    function atualizarContagem(valor){
+        setContagem(contagem + valor)
+    }
 
     const perguntas = [
         {questao: "O que é JSX?", resposta: "Uma extensão de linguagem do JavaScript"},
@@ -16,22 +24,16 @@ export default function Deck(){
 
     return (
         <>
-        <section className="deck">
-            <img src="./assets/imagens/zap.png" alt="zaprecall" />
-            <h1>ZapRecall</h1>
-        </section >  
+        <Topo />
 
-        
         <section className="perguntas">
             {
                 perguntas.map( (pergunta,index) => {
-                    return <Pergunta key={index} index={index} questao={pergunta.questao} resposta={pergunta.resposta} />} )
+                    return <Pergunta key={index} index={index} questao={pergunta.questao} resposta={pergunta.resposta} atualizarContagem={atualizarContagem} />} )
             }
         </section>
 
-        <section className="barra-inferior">
-            0/0 Concluidas
-        </section>
+       <Concluidas contagem={contagem} />
             
         </>
     )
