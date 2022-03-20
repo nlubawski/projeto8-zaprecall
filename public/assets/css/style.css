@@ -72,6 +72,7 @@ main{
     overflow-x: scroll;
     margin-bottom: 70px;
     margin-top: 150px;
+    
 }
 
 .pergunta{
@@ -83,6 +84,7 @@ main{
     align-items: center;
     padding: 10px;
     margin-bottom: 25px;
+    font-weight: 700;
 }
 
 .pergunta-questao, .pergunta-resposta{
@@ -94,8 +96,40 @@ main{
     align-items: center;
     padding: 10px;
     margin-bottom: 25px;
-   
-;
+}
+
+.pergunta-resposta-virada{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.pergunta-resposta-opcoes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pergunta-resposta-opcoes button{
+    width: 86px;
+    height: 37px;   
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.opcoes-nao-lembrei{
+    background-color: #FF3030;
+    color: #FFFFFF;
+}
+
+.opcoes-quase-lembrei{
+    background-color: #FF922E;
+    color: #FFFFFF;
+}
+
+.opcoes-zap{
+    background-color: #2FBE34;
+    color: #FFFFFF;
 }
 
 /* .pergunta p{
