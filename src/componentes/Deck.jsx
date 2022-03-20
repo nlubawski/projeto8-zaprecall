@@ -6,6 +6,11 @@ import Topo from './Topo'
 export default function Deck(){
 
     const [contagem, setContagem] = React.useState(0)
+    const [cartaClicada, setCartaClicada] = React.useState("")
+
+    function clicada(className){
+        setCartaClicada(className)
+    }
 
     function atualizarContagem(valor){
         setContagem(contagem + valor)
@@ -22,6 +27,13 @@ export default function Deck(){
         {questao: "Usamos estado (state) para __", resposta: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"}
 ]
 
+        perguntas.sort(embaralhar)
+
+        
+        function embaralhar() { 
+            return Math.random() - 0.5; 
+        }
+
     return (
         <>
         <Topo />
@@ -29,7 +41,7 @@ export default function Deck(){
         <section className="perguntas">
             {
                 perguntas.map( (pergunta,index) => {
-                    return <Pergunta key={index} index={index} questao={pergunta.questao} resposta={pergunta.resposta} atualizarContagem={atualizarContagem} />} )
+                    return <Pergunta key={index} index={index} questao={pergunta.questao} resposta={pergunta.resposta} atualizarContagem={atualizarContagem} clicada={clicada} cartaClicada={cartaClicada}/>} )
             }
         </section>
 

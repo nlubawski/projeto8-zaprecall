@@ -1,16 +1,17 @@
 import React from "react"
 import OpcaoDoBotao from "./OpcaoDoBotao"
 
-export default function Resposta({resposta,soResposta,questao, atualizarContagem}){
+export default function Resposta({resposta,soResposta,questao, atualizarContagem, clicada}){
   
     const [abrirResposta, setAbrirResposta] = React.useState(false)
+    
 
     if (abrirResposta){
         return (<div   className="pergunta-resposta pergunta-resposta-virada "><p>{resposta} </p>
         <div className="pergunta-resposta-opcoes">
-            <OpcaoDoBotao atualizarContagem={atualizarContagem} />
-            <button className="opcoes-quase-lembrei">Quase Não Lembrei</button> 
-            <button className="opcoes-zap">Zap!       </button>
+            <OpcaoDoBotao atualizarContagem={atualizarContagem} clicada={clicada} classe={"opcoes-nao-lembrei"}/>
+            <OpcaoDoBotao atualizarContagem={atualizarContagem} clicada={clicada}classe={"opcoes-quase-lembrei"}/>
+            <OpcaoDoBotao atualizarContagem={atualizarContagem} clicada={clicada} classe={"opcoes-zap"}/>
         </div>
         </div>)
     }else{
