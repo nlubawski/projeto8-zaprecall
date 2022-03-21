@@ -11,9 +11,8 @@ export default function OpcaoDoBotao({
   return (
     <button
       onClick={() => {
-        atualizarContagem(1);
+        atualizarContagem([1,classeRetorno]);
         atualizarPerguntas(classeRetorno)
-        console.log()
       }}
       className={classe}
     >

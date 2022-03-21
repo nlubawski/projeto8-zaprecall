@@ -5,8 +5,10 @@ import Topo from "./Topo";
 
 export default function Deck({perguntas}) {
   const [contagem, setContagem] = React.useState(0);
+  const [icones, setIcones] = React.useState("");
 
-  function atualizarContagem(valor) {
+  function atualizarContagem([valor,iconesChegando]) {
+    setIcones (icones + iconesChegando + " ") 
     setContagem(contagem + valor);
   }
 
@@ -14,7 +16,7 @@ export default function Deck({perguntas}) {
     <>
       <Topo />
       <Perguntas perguntas={perguntas} atualizarContagem={atualizarContagem} />
-      <Concluidas contagem={contagem} />
+      <Concluidas contagem={contagem} icones={icones} />
     </>
   );
 
