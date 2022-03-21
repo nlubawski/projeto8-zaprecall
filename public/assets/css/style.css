@@ -27,7 +27,7 @@ main{
     height: 65px;
 }
 
-.tela-inicial h1, .deck h1{
+.tela-inicial h1, .topo h1{
     font-family: 'Righteous', cursive;
     font-size: 36px;
     line-height: 31px;
@@ -54,7 +54,7 @@ main{
     border: solid 1px #D70900;
 }
 
-.deck{
+.topo{
     height: 150px;
     width: 100%;
     display: flex;
@@ -64,13 +64,13 @@ main{
     top: 0;
 }
 
-.deck img{
+.topo img{
     height: 60px;
     width: 52px;
     padding-right: 20px;
 }
 
-.deck h1{
+.topo h1{
     font-family: 'Righteous', cursive;
     font-size: 25px;
     line-height: 31px;
@@ -158,6 +158,55 @@ main{
     flex-direction: column;
 }
 
+.barra-inferior-ajustes{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.barra-inferior-extendida{
+    height: 140px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resultado{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo{
+    font-family: 'Recursive', sans-serif;
+    font-weight: 700;
+    padding-bottom: 8px;
+    display: flex;
+}
+
+.titulo img{
+    margin-right: 8px;
+}
+.resultado p{
+    font-family: 'Recursive', sans-serif;
+    padding-bottom: 8px;
+    padding-left: 5px;
+}
+
+.contagem{
+    font-family: 'Recursive', sans-serif;
+    text-align: center;
+}
+
 .errou{
 
     background-color: #FFFFFF;
@@ -201,6 +250,7 @@ ion-icon{
 
 .barra-inferior-icones {
     display: flex;
+    padding-top: 8px;
 }
 
 .icone-errou{
@@ -216,8 +266,6 @@ ion-icon{
 }
 
 
-
-
 @media screen and (min-width: 1100px) {
 
     .tela-inicial img{
@@ -225,7 +273,7 @@ ion-icon{
         height: 98px;
     }
     
-    .tela-inicial h1, .deck h1{
+    .tela-inicial h1, .topo h1{
         font-size: 56px;
     }
 
@@ -243,23 +291,24 @@ ion-icon{
         height: 64px;
     }
     
-    .deck{
-        height: 250px
+    .topo{
+        height: 150px
     }
     
-    .deck img{
+    .topo img{
         height: 80px;
         width: 72px;
         padding-right: 20px;
     }
     
-    .deck h1{
+    .topo h1{
         font-size: 36px;
     }
     
     .perguntas{
-        margin-bottom: 118px;
-        margin-top: 250px;
+        margin-bottom: 80px;
+        margin-top: 150px;
+        overflow-x: hidden;
     }
     
     .pergunta{
@@ -282,7 +331,7 @@ ion-icon{
     }
     
     .barra-inferior{
-        height: 118px;
+        height: 80px;
     }
 
 }
