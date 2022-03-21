@@ -35,7 +35,41 @@ export default function TelaInicial() {
     },
   ];
 
+  const DeckDois = [
+    {
+      questao: "What is JSX?",
+      resposta: "A language extension of JavaScript",
+    },
+    {
+      questao: "React is __",
+      resposta: "a JavaScript library for building interfaces",
+    },
+    {
+      questao: "Components must start with __",
+      resposta: "capital letter",
+    },
+    { questao: "Can we put __ inside JSX", resposta: "expressions" },
+    {
+      questao: "Does ReactDOM help us __",
+      resposta: "interacting with the DOM to put React components in it",
+    },
+    {
+      questao: "We use npm for __ ",
+      resposta: "manage required packages and their dependencies",
+    },
+    {
+      questao: "We use props for __",
+      resposta: "pass different information to components",
+    },
+    {
+      questao: "We use state for __",
+      resposta:
+        "tell React what information when refreshed should render the screen again",
+    },
+  ];
+
   DeckUm.sort(embaralhar);
+  DeckDois.sort(embaralhar);
 
   function embaralhar() {
     return Math.random() - 0.5;
@@ -47,15 +81,27 @@ export default function TelaInicial() {
     setVisivel(!visivel);
   }
 
+  const [valor, setValor] = React.useState("DeckUm");
+  let deck = 0;
+  if (valor === "DeckUm") {
+    deck = DeckUm;
+  } else {
+    deck = DeckDois;
+  }
   if (visivel === true) {
     return (
       <section className="tela-inicial">
         <img src="./assets/imagens/zap.png" alt="zaprecall" />
         <h1>ZapRecall</h1>
+        <select onChange={(valor) => setValor(valor.target.value)}>
+          <option value="DeckUm">Deck1</option>
+          <option value="DeckDois">Deck2</option>
+        </select>
+
         <button onClick={iniciar}>Iniciar Recall!</button>
       </section>
     );
   } else {
-    return <Deck perguntas={DeckUm} />;
+    return <Deck perguntas={deck} />;
   }
 }

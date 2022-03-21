@@ -8,17 +8,6 @@ export default function OpcaoDoBotao({
   texto,
   viraCacete,
 }) {
-  //const [clicado, setClicado] = React.useState(false)
-  //     return !clicado ? (
-  //         <button onClick={() => {
-  //             setClicado(!clicado)
-  //             atualizarContagem(1)
-  //             clicada(classeRetorno)
-  //             }
-  //         } className={classe}>Não Lembrei</button>
-  //     ) : <></>
-  //
-  //
 
   return (
     <button

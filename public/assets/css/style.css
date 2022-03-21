@@ -35,13 +35,23 @@ main{
     color: #FFFFFF;
 }
 
+.tela-inicial select{
+    width: 246px;
+    height: 43px;
+    margin-top: 45px;
+    border-radius: 5px;
+    border: #FFFFFF;
+    color: #ADADAD;
+}
+
 .tela-inicial button{
-    width: 141px;
-    height: 31px;
+    width: 246px;
+    height: 54px;
     background-color: #FFFFFF;
     color: #D70900;
     border-radius: 4px;
-    margin-top: 73px;
+    margin-top: 33px;
+    border: solid 1px #D70900;
 }
 
 .deck{
