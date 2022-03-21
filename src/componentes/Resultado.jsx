@@ -1,3 +1,6 @@
+import Sad from "./../assets/imagens/sad.png"
+import Party from "./../assets/imagens/party.png"
+
 export default function Resultado({auxiliar}){
 
     function errados(item){
@@ -11,7 +14,7 @@ export default function Resultado({auxiliar}){
         return (
             <div className="resultado">
             <div className="titulo">
-            <img src="./assets/imagens/sad.png" alt="ganhou"/>
+            <img src={Sad} alt="ganhou"/>
             <h1>Putz!</h1>
             </div>
             <p>Ainda faltam alguns... Mas não desanime!</p>
@@ -21,11 +24,13 @@ export default function Resultado({auxiliar}){
         return (
                 <div className="resultado">
                 <div className="titulo">
-                <img src="./assets/imagens/party.png" alt="ganhou"/>
+                <img src={Party} alt="ganhou"/>
                 <h1>Parabéns!</h1>
                 </div>
                 <p>Você não esqueceu de nenhum flashcard!</p>
+        
             </div>
+            
             )
     }
 

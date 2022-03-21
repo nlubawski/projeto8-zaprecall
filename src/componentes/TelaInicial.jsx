@@ -1,7 +1,9 @@
 import React from "react";
 import Deck from "./Deck";
+import Zap from "./../assets/imagens/zap.png"
 
 export default function TelaInicial() {
+ 
   const DeckUm = [
     {
       questao: "O que é JSX?",
@@ -68,9 +70,6 @@ export default function TelaInicial() {
     },
   ];
 
-  DeckUm.sort(embaralhar);
-  DeckDois.sort(embaralhar);
-
   function embaralhar() {
     return Math.random() - 0.5;
   }
@@ -85,13 +84,16 @@ export default function TelaInicial() {
   let deck = 0;
   if (valor === "DeckUm") {
     deck = DeckUm;
+    deck.sort(embaralhar);
+  
   } else {
     deck = DeckDois;
+    deck.sort(embaralhar);
   }
   if (visivel === true) {
     return (
       <section className="tela-inicial">
-        <img src="./assets/imagens/zap.png" alt="zaprecall" />
+        <img src={Zap} alt="zaprecall" />
         <h1>ZapRecall</h1>
         <select onChange={(valor) => setValor(valor.target.value)}>
           <option value="DeckUm">Deck1</option>

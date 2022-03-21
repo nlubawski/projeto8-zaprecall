@@ -1,5 +1,6 @@
 import React from "react";
 import OpcaoDoBotao from "./OpcaoDoBotao";
+import Virar from "./../assets/imagens/virar.png"
 
 export default function Resposta({
   resposta,
@@ -51,7 +52,7 @@ export default function Resposta({
             soResposta = true;
             setAbrirResposta(!abrirResposta);
           }}
-          src="./assets/imagens/virar.png"
+          src={Virar}
           alt="abrir pergunta"
         />
       </div>

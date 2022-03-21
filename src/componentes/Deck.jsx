@@ -3,7 +3,7 @@ import Perguntas from "./Perguntas";
 import Concluidas from "./Concluidas";
 import Topo from "./Topo";
 
-export default function Deck({perguntas}) {
+export default function Deck({perguntas, reset}) {
   const [contagem, setContagem] = React.useState(0);
   const [icones, setIcones] = React.useState("");
 

@@ -1,7 +1,7 @@
 import IconesInferiores from "./IconesInferiores";
 import Resultado from "./Resultado";
 
-export default function Concluidas({ contagem, icones }) {
+export default function Concluidas({ contagem, icones}) {
   let auxiliar = icones.split(" ");
   auxiliar.pop()
 
@@ -10,6 +10,7 @@ export default function Concluidas({ contagem, icones }) {
       <div className="barra-inferior-extendida">
         <Resultado auxiliar={auxiliar}/>
         <IconesInferiores contagem={contagem} auxiliar={auxiliar} css={"barra-ajustes"} />
+        <button >REINICIAR RECALL</button>
       </div>
     )
     

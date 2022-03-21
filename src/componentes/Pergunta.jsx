@@ -1,5 +1,6 @@
 import React from "react";
 import Resposta from "./Resposta";
+import Seta from "./../assets/imagens/seta.png"
 
 export default function Pergunta({
   questao,
@@ -60,7 +61,7 @@ export default function Pergunta({
         <p>Pergunta {index + 1}</p>{" "}
         <img
           onClick={() => setAbrirPergunta(!abrirPergunta)}
-          src="./assets/imagens/seta.png"
+          src={Seta}
           alt="ver resposta"
         />
       </div>
