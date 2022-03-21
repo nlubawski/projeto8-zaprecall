@@ -1,13 +1,9 @@
-import TelaInicial from "./TelaInicial"
-import Deck from "./Deck"
+import TelaInicial from "./TelaInicial";
 
-export default function App(){
-    return (
-        <main>
-            <TelaInicial />
-            {/* <Deck /> */}
-            
-        </main>
-        
-    )
+export default function App() {
+  return (
+    <main>
+      <TelaInicial />
+    </main>
+  );
 }

@@ -85,6 +85,7 @@ main{
     padding: 10px;
     margin-bottom: 25px;
     font-weight: 700;
+    border-radius: 5px;
 }
 
 .pergunta-questao, .pergunta-resposta{
@@ -96,6 +97,7 @@ main{
     align-items: center;
     padding: 10px;
     margin-bottom: 25px;
+    border-radius: 5px;
 }
 
 .pergunta-resposta-virada{
@@ -158,5 +160,101 @@ main{
     padding: 10px;
     margin-bottom: 25px;
     color: red;
+
+}
+
+.quase{
+    width: 300px;
+    height: 130px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 25px;
+    color: orange;
+
+}
+
+.zap{
+    width: 300px;
+    height: 130px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 25px;
+    color: green;
+
+}
+
+@media screen and (min-width: 1100px) {
+
+    .tela-inicial img{
+        width: 88px;
+        height: 98px;
+    }
+    
+    .tela-inicial h1, .deck h1{
+        font-size: 56px;
+    }
+    
+    .tela-inicial button{
+        width: 241px;
+        height: 41px;
+        margin-top: 93px;
+    }
+    
+    .deck{
+        height: 250px
+    }
+    
+    .deck img{
+        height: 80px;
+        width: 72px;
+        padding-right: 20px;
+    }
+    
+    .deck h1{
+        font-size: 36px;
+    }
+    
+    .perguntas{
+        margin-bottom: 118px;
+        margin-top: 250px;
+    }
+    
+    .pergunta{
+        width: 568px;
+        height: 92px;
+        padding: 15px;
+        margin-bottom: 35px;
+    }
+    
+    .pergunta-questao, .pergunta-resposta{
+        width: 568px;
+        height: 92px;
+        padding: 15px;
+        margin-bottom: 35px;
+    }
+
+    .pergunta-resposta-opcoes button{
+        width: 90px;
+        height: 45px;   
+    }
+    
+    .barra-inferior{
+        height: 118px;
+    }
+    
+    /* .errou{  
+    }
+    
+    .quase{
+    }
+    
+    .zap{    
+    } */
 
 }
