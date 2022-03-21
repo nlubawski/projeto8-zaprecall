@@ -159,8 +159,7 @@ main{
 }
 
 .errou{
-    width: 300px;
-    height: 130px;
+
     background-color: #FFFFFF;
     display: flex;
     justify-content: space-between;
@@ -173,8 +172,7 @@ main{
 }
 
 .quase{
-    width: 300px;
-    height: 130px;
+ 
     background-color: #FFFFFF;
     display: flex;
     justify-content: space-between;
@@ -187,8 +185,6 @@ main{
 }
 
 .zap{
-    width: 300px;
-    height: 130px;
     background-color: #FFFFFF;
     display: flex;
     justify-content: space-between;
@@ -197,7 +193,6 @@ main{
     margin-bottom: 25px;
     color: green;
     text-decoration: line-through;
-
 }
 
 ion-icon{
