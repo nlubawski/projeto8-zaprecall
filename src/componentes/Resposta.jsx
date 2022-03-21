@@ -6,7 +6,7 @@ export default function Resposta({
   soResposta,
   questao,
   atualizarContagem,
-  clicada,
+  atualizarPerguntas
 }) {
   const [abrirResposta, setAbrirResposta] = React.useState(false);
 
@@ -17,24 +17,26 @@ export default function Resposta({
         <div className="pergunta-resposta-opcoes">
           <OpcaoDoBotao
             atualizarContagem={atualizarContagem}
-            clicada={clicada}
             classe={"opcoes-nao-lembrei"}
             classeRetorno={"errou"}
             texto={"Não Lembrei"}
+            atualizarPerguntas={atualizarPerguntas}
           />
           <OpcaoDoBotao
             atualizarContagem={atualizarContagem}
-            clicada={clicada}
             classe={"opcoes-quase-lembrei"}
             classeRetorno={"quase"}
             texto={"Quase Lembrei"}
+            atualizarPerguntas={atualizarPerguntas}
+
           />
           <OpcaoDoBotao
             atualizarContagem={atualizarContagem}
-            clicada={clicada}
             classe={"opcoes-zap"}
             classeRetorno={"zap"}
             texto={"Zap"}
+            atualizarPerguntas={atualizarPerguntas}
+
           />
         </div>
       </div>

@@ -3,7 +3,7 @@ import Perguntas from "./Perguntas";
 import Concluidas from "./Concluidas";
 import Topo from "./Topo";
 
-export default function Deck({ perguntas }) {
+export default function Deck({perguntas}) {
   const [contagem, setContagem] = React.useState(0);
 
   function atualizarContagem(valor) {
@@ -17,4 +17,8 @@ export default function Deck({ perguntas }) {
       <Concluidas contagem={contagem} />
     </>
   );
+
+
+
+
 }
