@@ -10,7 +10,7 @@ export default function Concluidas({ contagem, icones}) {
       <div className="barra-inferior-extendida">
         <Resultado auxiliar={auxiliar}/>
         <IconesInferiores contagem={contagem} auxiliar={auxiliar} css={"barra-ajustes"} />
-        <button >REINICIAR RECALL</button>
+        {/* <button >REINICIAR RECALL</button> */}
       </div>
     )
     
